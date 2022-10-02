@@ -1,4 +1,4 @@
-import styles from './breadcrumb.module.scss'
+import Styles from './breadcrumb.module.scss'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -16,7 +16,7 @@ export default function Breadcrumb() {
 
     return (
       <>
-        <div className={styles.breadcrumb}>
+        <div className={Styles.breadcrumb}>
             {crumbs.map(({text, link})=>(
                 <Link href={link} key={link}><a>/ {text} </a></Link>
                 ))}
